@@ -1,5 +1,5 @@
 # EARrec
- Efficient association rule Recommendation System for big data - The Homework of Advanced operating system
+Efficient association rule Recommendation System for big data - The Homework of Advanced operating system
 
 ## 基本步骤
 
@@ -10,11 +10,28 @@
 - 推荐分值计算
   - 使用最高置信度作为候选项分值
 
+### 频繁模式挖掘
+
+> 这里使用最简单的Apriori算法，很慢，15min才跑到C2
+
+https://pic1.zhimg.com/80/v2-bea6c42ce1e630b6bb2fe6b0f68679c0_720w.jpg
+
+![](https://pic1.zhimg.com/80/v2-bea6c42ce1e630b6bb2fe6b0f68679c0_720w.jpg)
+
 ## 运行环境
 
 ![](https://img.shields.io/badge/hadoop-2.7.1-brightgreen)
 ![](https://img.shields.io/badge/spark-3.2.1-brightgreen)
 ![](https://img.shields.io/badge/scala-2.12.15-brightgreen)
+
+## 数据集说明
+
+```
+trans_10W.txt // 购物车数据
+pattern_1W.txt // 频繁模式
+test_2W.txt // 用户数据
+result.txt // 更具频繁模式推荐的top1
+```
 
 ## 提交要求
 
