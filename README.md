@@ -47,3 +47,5 @@ $ spark-submit --master <test spark cluster master uri> --class AR.Main --execut
 - [Spark 2.2.0中文文档](http://spark.apachecn.org/#/docs/3)
 - [开发工具之Spark程序开发详解](http://t.zoukankan.com/frankdeng-p-9092512.html)
 - [linux怎么安装hadoop](https://m.php.cn/article/486140.html)
+- [[Scala FPGrowth类代码示例](https://vimsky.com/examples/detail/scala-class-org.apache.spark.mllib.fpm.FPGrowth.html)](https://vimsky.com/examples/detail/scala-class-org.apache.spark.mllib.fpm.FPGrowth.html)
+- [关联规则之FpGrowth算法以及Spark实现](https://blog.csdn.net/u013771019/article/details/107244180/)
