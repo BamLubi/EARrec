@@ -1,6 +1,0 @@
-java python hadoop
-spring python hadoop java c c++
-hbase spark scala
-scala python java
-linux unix java php
-mysql hive hue

@@ -41,6 +41,15 @@ result.txt // 更具频繁模式推荐的top1
 $ spark-submit --master <test spark cluster master uri> --class AR.Main --executor.memory 20G --driver.memory 20G <your jar file path> hdfs://<输入文件路径> hdfs://<输出文件路径> hdfs://<临时文件路径>
 ```
 
+```
+hdfs://127.0.0.1:9000/earrec/sample/trans_3W.txt
+hdfs://127.0.0.1:9000/earrec/sample/test_2W.txt
+hdfs://127.0.0.1:9000/earrec/out/pattern
+hdfs://127.0.0.1:9000/earrec/out/result
+```
+
+
+
 ## 参考
 
 - [Linux环境Spark安装配置及使用](https://juejin.cn/post/6844903839506792462)
@@ -49,3 +58,6 @@ $ spark-submit --master <test spark cluster master uri> --class AR.Main --execut
 - [linux怎么安装hadoop](https://m.php.cn/article/486140.html)
 - [[Scala FPGrowth类代码示例](https://vimsky.com/examples/detail/scala-class-org.apache.spark.mllib.fpm.FPGrowth.html)](https://vimsky.com/examples/detail/scala-class-org.apache.spark.mllib.fpm.FPGrowth.html)
 - [关联规则之FpGrowth算法以及Spark实现](https://blog.csdn.net/u013771019/article/details/107244180/)
+- [SparkConf常见参数设置](https://blog.csdn.net/yu7888/article/details/122666184)
+- [数据挖掘随笔（一）频繁模式挖掘与关联规则挖掘以及Apriori算法（python实现）](https://zhuanlan.zhihu.com/p/410019734)
+- [数据挖掘随笔（二）FP-growth算法——一种用于频繁模式挖掘的模式增长方式(Python实现)](https://zhuanlan.zhihu.com/p/411594391)
