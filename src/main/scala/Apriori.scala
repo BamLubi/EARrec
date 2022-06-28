@@ -3,6 +3,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 import scala.annotation.tailrec
 import scala.collection.mutable.ArrayBuffer
 
+// 关联规则
 class Rule(_his: ArrayBuffer[String], _item: String) {
   var item: String = _item
   val his: ArrayBuffer[String] = _his
@@ -28,13 +29,30 @@ object Apriori {
   val res_path = "hdfs://127.0.0.1:9000/earrec/out/result"
 
   def main(args: Array[String]): Unit ={
+    // 获取输入参数
+    println("输入参数：" + args.mkString("[", ",", "]"))
+    if(args.length == 4){
+      basket_path = args(0)
+      user_path = args(1)
+      pattern_path = args(2)
+      res_path = args(3)
+    }
+    println("购物篮数据输入目录: " + basket_path)
+    println("用户数据集输入目录: " + user_path)
+    println("频繁模式输出目录: " + pattern_path)
+    println("推荐结果输出目录: " + res_path)
+    println("最小支持度阈值: " + min_sup)
+    println("最小置信度值: " + min_conf)
 
     println("Main Start ...")
 
     val conf = new SparkConf() // 创建SparkConf对象
     conf.setAppName("EARrec App")
     conf.setMaster("local[*]")
-
+    conf.set("spark.driver.cores", "8")
+    conf.set("spark.default.parallelism","8")
+    conf.set("spark.dynamicAllocation.initialExecutors","4")
+    conf.set("spark.dynamicAllocation.maxExecutors","32")
     val sc = new SparkContext(conf)
 
 
